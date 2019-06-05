@@ -1,4 +1,4 @@
-import { controller, get, provide } from './node_modules/midway';
+import { controller, get, provide } from 'midway';
 
 @provide()
 @controller('/')
