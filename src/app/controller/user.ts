@@ -1,4 +1,4 @@
-import { controller, get, inject, provide } from './node_modules/midway';
+import { controller, get, inject, provide } from 'midway';
 import { IUserService, IUserResult } from '../../interface';
 
 @provide()
