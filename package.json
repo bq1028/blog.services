@@ -1,0 +1,45 @@
+{
+  "name": "blog.apis",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "egg-scripts": "^2.10.0",
+    "egg-sequelize": "^5.0.0",
+    "midway": "^1.0.0",
+    "mysql2": "^1.6.5"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.5",
+    "egg-ci": "^1.8.0",
+    "midway-bin": "1",
+    "midway-mock": "1",
+    "tslib": "^1.8.1",
+    "tslint-midway-contrib": "1",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-midway-demo --framework=midway",
+    "stop": "egg-scripts stop --title=egg-server-midway-demo",
+    "start_build": "npm run build && NODE_ENV=development midway-bin dev",
+    "dev": "NODE_ENV=local midway-bin dev --ts",
+    "debug": "NODE_ENV=local midway-bin debug --ts",
+    "test": "npm run lint && midway-bin test --ts",
+    "cov": "midway-bin cov --ts",
+    "lint": "tslint -c tslint.json --project .",
+    "ci": "npm run cov",
+    "build": "midway-bin build -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Philip",
+  "license": "MIT"
+}
