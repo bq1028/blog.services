@@ -1,5 +1,6 @@
 /**
- * @description User-Service parameters
+ * 接口
+ * @author Philip
  */
 export interface IUserOptions {
   id: number;
