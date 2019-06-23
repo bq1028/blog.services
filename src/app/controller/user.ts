@@ -11,6 +11,10 @@ export class UserController {
   async getUser(ctx): Promise<void> {
     const id: number = ctx.params.id;
     const user: IUserResult = await this.service.getUser({id});
-    ctx.body = {success: true, message: 'OK', data: user};
+    ctx.body = {
+      success: true, 
+      message: 'OK', 
+      data: user
+    };
   }
 }
