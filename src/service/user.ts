@@ -2,18 +2,26 @@
  * 用户
  * @author Philip
  */
-import { provide } from 'midway';
-import { IUserService, IUserOptions, IUserResult } from '../interface';
+import { provide, inject } from 'midway';
 
-@provide('userService')
-export class UserService implements IUserService {
-
-  async getUser(options: IUserOptions): Promise<IUserResult> {
-    return {
-      id: options.id,
-      username: 'mockedName',
-      phone: '12345678901',
-      email: 'xxx.xxx@xxx.com',
-    };
-  }
+@provide()
+export default class UserService {
+    @inject()
+    protected ctx;
+  
+    /**
+     * 登陆
+     * @
+     */
+    protected async login () {
+    
+    }
+  
+    /**
+     * 远端登陆
+     * @
+     */
+    protected async loginRemote () {
+    
+    }
 }
