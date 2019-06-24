@@ -1,3 +1,8 @@
+/**
+ * 用户 dao
+ * @author Philip
+ */
+
 module.exports = app => {
     const { STRING, INTEGER } = app.Sequelize;
 
