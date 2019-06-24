@@ -5,8 +5,17 @@ export = (appInfo: any) => {
   config.keys = appInfo.name + '_1559636705909_6272';
 
   // add your config here
-  config.middleware = [
-  ];
+  config.middleware = [];
 
+  // sequelize 
+  config.sequelize = {
+      dialect: 'mysql',
+      host: '127.0.0.1',
+      port: 3306,
+      database: 'blog',
+      username: 'admin',
+      password: 'Wowcxy2008'
+  };
+  
   return config;
 };
