@@ -4,8 +4,8 @@ import { IUserService, IUserResult } from '../../interface';
 @provide()
 @controller('/user')
 export class UserController {
-  @inject('userService')
-  service: IUserService;
+    @inject()
+    private userService;
 
   @get('/:id')
   async getUser(ctx): Promise<void> {
