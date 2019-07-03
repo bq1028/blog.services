@@ -3,7 +3,7 @@
  * @author Philip
  */
 import { controller, get, inject, provide } from 'midway';
-import { User, IUserResult } from '../../interface';
+import { User } from '../../interface';
 
 @provide()
 @controller('/user')
