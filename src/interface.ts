@@ -2,23 +2,41 @@
  * 接口
  * @author Philip
  */
-export interface IUserOptions {
-  id: number;
+
+export interface Scanner {
+    ip: string;
+    ports: JSON;
 }
 
 /**
- * @description User-Service response
+ * 用户角色实体
+ * @Interface
  */
-export interface IUserResult {
-  id: number;
-  username: string;
-  phone: string;
-  email?: string;
+export interface Role {
+    name: stirng;
 }
 
 /**
- * @description User-Service abstractions
+ * 用户实体
+ * @Interface
  */
-export interface IUserService {
-  getUser(options: IUserOptions): Promise<IUserResult>;
+export interface User {
+    id: number;
+    name: string;
+    nickname: string;
+    avatar: string;
+    email: string;
+    phone: string;
+    role: Role;
+}
+
+/**
+ * 内容实体
+ * @Interface
+ */
+export interface Content {
+    title: string;
+    author: User;
+    content: string
+    keywords: string;
 }
